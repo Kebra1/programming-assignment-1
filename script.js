@@ -1,14 +1,55 @@
-function calculatePizza() {
+function doMath() {
   
-  let size = document.getElementById("pizzaSize").value;
-  let price = document.getElementById("pizzaPrice").value;
+  let userName = document.getElementById("nameBox").value;
+  
 
-  let radius = size / 2;
-  let area = 3.14159 * (radius * radius);
+  let pizzaSize = document.getElementById("sizeBox").value;
+  
 
-  let costPerCm = price / area;
+  let pizzaPrice = document.getElementById("priceBox").value;
 
-  let finalCost = Math.round(costPerCm);
 
-  document.getElementById("answerText").innerHTML = "It costs " + finalCost + " tenge per square cm!";
+  if (userName == "") {
+
+    document.getElementById("finalAnswer").innerHTML = "Error: Put your name first!";
+    return;
+  }
+  
+  if (pizzaSize <= 0) {
+
+    document.getElementById("finalAnswer").innerHTML = "Error: Put a real size!";
+    return;
+  }
+  
+  if (pizzaPrice <= 0) {
+
+    document.getElementById("finalAnswer").innerHTML = "Error: Put a real price!";
+    return;
+  }
+
+  let radius = pizzaSize / 2;
+  
+  let area = 3.14 * radius * radius;
+  
+  let cost = pizzaPrice / area;
+  
+  let finalCost = Math.round(cost);
+
+  let message = "";
+
+  if (finalCost < 10) {
+
+    message = "This is a cheap pizza!";
+  } 
+
+  else if (finalCost >= 10 && finalCost <= 15) {
+  
+    message = "This is a normal price.";
+  } 
+
+  else {
+    message = "This is too expensive!";
+  }
+
+  document.getElementById("finalAnswer").innerHTML = "Hello " + userName + "! One cm costs " + finalCost + " tenge. " + message;
 }
