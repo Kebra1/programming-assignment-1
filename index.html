@@ -1,28 +1,32 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <title>Pizza Calculator</title>
+  <title>My Pizza App</title>
+  
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-  <div class="box">
-    <h2>Pizza Value Calculator</h2>
+<body>
+  <center>
     
+    <h1>Pizza Value Calculator</h1>
+    
+    <p>What is your name?</p>
+    <input type="text" id="nameBox">
+
     <p>Pizza size (cm):</p>
-    <input type="number" id="pizzaSize">
-    
-    <p>Price (Tenge):</p>
-    <input type="number" id="pizzaPrice">
-    
+    <input type="number" id="sizeBox">
+
+    <p>Pizza price (Tenge):</p>
+    <input type="number" id="priceBox">
+
     <br><br>
+
+    <button onclick="doMath()">Calculate</button>
+
+    <h2 id="finalAnswer"></h2>
     
-    <button onclick="calculatePizza()">Calculate</button>
-    
-    <h3 id="answerText"></h3>
-  </div>
+  </center>
 
   <script src="script.js"></script>
-
 </body>
 </html>
