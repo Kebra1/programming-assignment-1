@@ -1,106 +1,13 @@
-# Personal Assignment 1
+I built a 'Pizza Value Calculator'. Sometimes it is hard to tell if a large pizza is actually a better deal than a small pizza just by looking at the total price. My project solves this problem by figuring our exactly how many Kazakh tenge you are paying for one single square centiment of pizza. It helps people see the 'hidden' real value of what they are buying. 
+My solution uses HTML to create a simple layour that asks the user for their name, the pizza's size(in cm) and the total price. When the user clicks the 'Calculate' button, my JavaScript runs a function called doMath().
+How the solution is worked out:
+First, the code uses if statements to check if the user left the boxes empty or typed impossible numbers(like negative size or price). If they did, it stops the math and prints an error.
+Then it take the size and divides it by 2 to get the radius. Then it uses the standard geometry formula for the area of a circle ( Area=3.14 * radius * radius) to find the total area of the pizza.
+The next step, it divides the total price by the area to find the cost of a single square centimeter, and uses Math.round() to keep the number clean.
+Finally, it uses if/else statements to judge the final price. IF it costs less than 10 tenge per cm, it calls it a cheap pizza. If it is between 10 and 15, it calls it normal. If ir is higher, ir warns the user that it is too expensive. It then glues all of this into a personalized sentence using the user's name and prints it on the screen.
 
-## Objective
-
-Create a small **web-based calculator** that takes personal data as input, processes it using a formula of your choice, and displays output.  
-
-This task will help you understand:
-
-- Variables  
-- Conditional logic (`if/else`)  
-- Input → Process → Output flow  
-
-You are free to choose the type of calculation, but it should be **realistic, measurable, and meaningful**.
-
----
-
-## Assignment Guidelines
-
-### Allowed Technologies
-
-- **HTML** — for form inputs and output display  
-- **CSS** — for styling and layout  
-- **JavaScript** — for logic, calculations, and output  
-
----
-
-### Input Requirements
-
-Your calculator should take **at least two inputs** from the user. Examples:
-
-- Weight & height → BMI  
-- Power & hours → Electricity cost  
-- Distance & time → Pace  
-- Any other real-world values you choose  
-
-> You are encouraged to **think creatively**. Inputs should be measurable and realistic.
-
----
-
-### Process Requirements
-
-Your JavaScript must:
-
-- Store input values in **variables**  
-- Perform **at least one calculation**  
-- Use **if/else conditions** to classify or interpret results  
-- You may define your **own calculation formula**, or use a known index like BMI  
-
----
-
-### Output Requirements
-
-Your page must:
-
-- Display output **directly in HTML** (not just console)  
-- Include a **personalized message** (e.g., “Hello, [Name]”)  
-- Show **calculated value(s)**  
-- Show **category or interpretation** if relevant
----
-
-### Submission Instructions
-
-1. **Fork** this repository  
-2. Create a new branch:  
-3. Complete your assignment in the four files:  
-- `index.html`  
-- `style.css`  
-- `script.js`  
-- `README.md` (update with your description or notes if needed)  
-4. Commit & push your branch to your GitHub fork  
-5. Be ready for an **oral explanation** of your solution  
-
----
-
-### Evaluation & Oral Assessment
-
-During the oral assessment, you should be able to explain:
-
-- What each input represents  
-- How calculations are done  
-- How conditional logic determines categories  
-- What happens if inputs are unusual  
-- How binary or optional output is calculated  
-
-> ⚠️ **Important AI Guidance:**  
-> You **may use AI tools** for suggestions or syntax help, but you must **fully understand and be able to explain every line** of your code.  
-> The **logic, calculations, and outputs must be your own work** — AI is a helper, not a replacement.
-
----
-
-### Creativity & Flexibility
-
-- You may choose a different calculation than BMI, Electricity, or Pace  
-- You may add **extra outputs or optional features**  
-- You may **style your page creatively**  
-
-> The goal is **computational thinking, problem-solving, and clear input → process → output understanding**.
-
----
-
-### Your Submission Should Include
-
-- `index.html` → form placeholder for user inputs and output  
-- `style.css` → styling for the page  
-- `script.js` → JavaScript file for calculations and logic  
-- `README.md` → clear explanation of your project and description of your solution
+Yes I used AI.
+What I asked AI for: I asked AI to help me understand the basic structure of how to connect my HTML,CSS, and JavaScript files together. I also asked it how to stop the math form running is a user accidentally leaves the input boxes blank.
+What I modified myself: I wrote my own simple variable names(like nameBox, pizzaSize, and doMath() so I could understand what each line was doing. I also wrote the exact if statements to catch negative numbers, set the currency to Tenge, and customized the text for the final output messages.
+What I fully understand now: I now understand how JavaScript reads code. I also fully understand how to use document.getElementById().value to grab the exact number a user typed,and how to use basic if/else statements to change the final sentene based on the math result.
+Reflections: This assignment showed me how to turn basic math into something visual. Applying geometry formulas like the area of a circle directly inside JS was actually a really cool way to practive the math I'm  studying for the UNT and see it used in practical way. I also learned how improtant it is to think about what the user might do wrong - like typing a negative price or leaving the name blank - and how to write simple code to catch those mistakes before they break the program.
