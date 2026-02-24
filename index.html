@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Personal Calculator</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Pizza Calculator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Personal Calculator</h1>
+  <div class="box">
+    <h2>Pizza Value Calculator</h2>
+    
+    <p>Pizza size (cm):</p>
+    <input type="number" id="pizzaSize">
+    
+    <p>Price (Tenge):</p>
+    <input type="number" id="pizzaPrice">
+    
+    <br><br>
+    
+    <button onclick="calculatePizza()">Calculate</button>
+    
+    <h3 id="answerText"></h3>
+  </div>
 
-<form id="calculatorForm">
-    <!-- Add input fields here -->
-</form>
+  <script src="script.js"></script>
 
-<div id="output">
-    <!-- Results will be displayed here -->
-</div>
-
-<script src="script.js"></script>
 </body>
 </html>
