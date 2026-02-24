@@ -1,31 +1,20 @@
-
 body {
-  font-family: Arial, sans-serif;
-  background-color: #881a92;
-  text-align: center;
-  padding-top: 50px;
+
+  background-color: lightblue;
+
+  font-family: Arial;
 }
 
-.box {
-  background-color: rgb(241, 128, 14);
-  padding: 20px;
-  width: 300px;
-  margin: 0 auto; 
-  border: 2px solid #ccc;
-  border-radius: 10px; 
+h1 {
+  color: red;
 }
 
 input {
-  margin-bottom: 15px;
-  padding: 8px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 button {
-  background-color: rgb(42, 228, 76);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
+  background-color: yellow;
+  font-size: 20px;
+  padding: 10px;
 }
